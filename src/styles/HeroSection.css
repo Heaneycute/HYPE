@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
+
+@font-face {
+  font-family: "Days";
+  src: local("Days"), url("/fonts/Days.ttf") format("truetype");
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  background: rgb(27, 27, 27);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/heroBG.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0) 0%, #000000 100%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 26.04vw;
+  line-height: 2.6vw;
+  position: relative;
+  z-index: 1;
+  margin-top: 15vw;
+}
+
+.hero-subtitle {
+  font-family: "Days", sans-serif;
+  font-weight: 400;
+  font-size: 2.08vw;
+  font-style: normal;
+  line-height: normal;
+  position: relative;
+  top: 9vw;
+  left: -32.5vw;
+}
+
+.hero-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.56vw;
+  position: relative;
+  top: 12vw;
+  left: 1.8vw;
+  text-align: left;
+}
+
+.hero-images {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-left {
+  position: relative;
+  width: 32vw;
+  height: 40vw;
+  left: 7vw;
+  top: -15vw;
+}
+
+.hero-image-right {
+  position: relative;
+  width: 32vw;
+  height: 40vw;
+  right: 10.5vw;
+  bottom: 7.5vw;
+}
+
+.hero-footer-text {
+  position: absolute;
+  bottom: 15vw;
+  right: 1.04vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.56vw;
+  text-align: right;
+}

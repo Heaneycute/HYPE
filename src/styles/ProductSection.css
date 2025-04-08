@@ -1,0 +1,133 @@
+.product-section {
+  position: relative;
+  width: 100%;
+  height: 48.17vw;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.s2-right-chunk {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: auto;
+  z-index: 0;
+}
+
+.product-carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carousel-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.product-card {
+  flex: 0 0 25%;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+.product-image {
+  width: 20vw;
+  height: 28vw;
+  object-fit: contain;
+}
+
+.product-type {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.56vw;
+  text-align: center;
+}
+
+.product-flavor {
+  font-family: "Days", sans-serif;
+  font-weight: 400;
+  font-size: 2.08vw;
+  line-height: normal;
+  text-align: center;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  z-index: 2;
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.arrow-image {
+  width: 5.2vw;
+  aspect-ratio: 1;
+}
+
+.learn-more-btn {
+  margin-top: 2.08vw;
+  padding: 1vw 2vw;
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Days", sans-serif;
+  font-weight: 400;
+  font-size: 2.08vw;
+  line-height: normal;
+  letter-spacing: 0%;
+  text-align: center;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s ease, transform 0.3s ease-in-out;
+  margin-top: 3vw;
+  --borderW: 5%;
+  --borderH: 20%;
+  --borderSize: 0.1vw;
+  background-image: linear-gradient(white var(--borderH), transparent var(--borderH), transparent calc(100% - var(--borderH)), white calc(100% - var(--borderH))),
+                    linear-gradient(90deg, white var(--borderW), transparent var(--borderW), transparent calc(100% - var(--borderW)), white calc(100% - var(--borderW))),
+                    linear-gradient(white var(--borderH), transparent var(--borderH), transparent calc(100% - var(--borderH)), white calc(100% - var(--borderH))),
+                    linear-gradient(90deg, white var(--borderW), transparent var(--borderW), transparent calc(100% - var(--borderW)), white calc(100% - var(--borderW)));
+  background-size: var(--borderSize) 100%, 100% var(--borderSize), var(--borderSize) 100%, 100% var(--borderSize);
+  background-position: 0 0, 0 0, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.learn-more-btn:hover {
+  transform: scale(1.1);
+}
+
+.learn-more-btn::before,
+.learn-more-btn::after {
+  display: none;
+}

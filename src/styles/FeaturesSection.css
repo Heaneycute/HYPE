@@ -1,0 +1,82 @@
+.features-section {
+    position: relative;
+    width: 100%;
+    height: 39.89vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.6vw 1.04vw;
+    overflow: hidden;
+  }
+  
+  .s3-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 0;
+  }
+  
+  .features-title {
+    font-family: "Days", sans-serif;
+    font-weight: 800;
+    font-size: 3.12vw;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    margin: 0 35vw 2vw 0;
+    z-index: 1;
+  }
+  
+  .features-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 5vw;
+    z-index: 1;
+  }
+  
+  .feature-card {
+    width: 27.6vw;
+    height: 17.91vw;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2.5vw);
+    box-shadow: 0 0 3.54vw 0 rgba(255, 255, 255, 0.05) inset,
+      0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
+    border-radius: 0.52vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 2vw;
+    text-align: left;
+  }
+  
+  .feature-card-title {
+    font-family: "Days", sans-serif;
+    font-weight: 400;
+    font-size: 2.08vw;
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 6vw;
+  }
+  
+  .feature-card-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 1.56vw;
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .features-footer-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 1.56vw;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    margin-right: 28vw;
+  }
+  

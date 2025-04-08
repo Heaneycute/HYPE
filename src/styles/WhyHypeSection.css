@@ -1,0 +1,170 @@
+.why-hype-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding-top: 5vw;
+}
+
+.s6-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  height: auto;
+  z-index: 0;
+}
+
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 7vw;
+  z-index: 2;
+}
+
+.intro-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.56vw;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 5vw;
+}
+
+.cards-fan {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  left: -3vw;
+}
+
+.card {
+  position: absolute;
+  width: 35vw;
+  height: 40vw;
+}
+
+.card-first {
+  transform: rotate(-1deg);
+  left: 0;
+  z-index: 4;
+}
+
+.card-second {
+  bottom: 2vw;
+  left: 10.5vw;
+  z-index: 3;
+}
+
+.card-third {
+  top: 1vw;
+  left: 18vw;
+  z-index: 2;
+}
+
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.hype-window {
+  width: 46.77vw;
+  height: 57.08vw;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2.5vw);
+  box-shadow: 0 0 3.54vw 0 rgba(255, 255, 255, 0.05) inset,
+    0 0.1vw 0.1vw 0 rgba(255, 255, 255, 0.15) inset;
+  border-radius: 1.56vw;
+  padding: 0 0 0 4vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-title {
+  margin: 3vw 0 6vw 0;
+}
+
+.title-word {
+  font-family: "Days", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  display: block;
+}
+
+.title-word-1 {
+  font-weight: 400;
+  font-size: 2.08vw;
+  line-height: normal;
+}
+
+.title-word-2 {
+  font-weight: 400;
+  font-size: 3.12vw;
+  line-height: normal;
+  margin-left: 5.5vw;
+}
+
+.title-word-3 {
+  font-weight: 400;
+  font-size: 4.16vw;
+  line-height: normal;
+  margin-left: 11vw;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vw;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+}
+
+.reason-title {
+  font-family: "Days", sans-serif;
+  font-weight: 400;
+  font-size: 2.08vw;
+  line-height: normal;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 0.5vw;
+}
+
+.reason-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.56vw;
+  color: rgba(255, 255, 255, 1);
+}
+
+.bottom-content {
+  text-align: left;
+  margin-top: 2vw;
+  z-index: 1;
+}
+
+.bottom-subtitle {
+  font-family: "Days", sans-serif;
+  font-weight: 400;
+  font-size: 3.12vw;
+  line-height: normal;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 0 1vw 7vw;
+}
+
+.bottom-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  line-height: 1.56vw;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 0 5vw 7vw;
+}

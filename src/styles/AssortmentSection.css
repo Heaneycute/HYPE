@@ -1,0 +1,176 @@
+.assortment-section {
+    position: relative;
+    width: 100%;
+    height: 34.37vw;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .s5-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: auto;
+    z-index: 0;
+  }
+  
+  .assortment-title {
+    font-family: "Days", sans-serif;
+    font-weight: 400;
+    font-size: 3.12vw;
+    line-height: normal;
+    color: rgba(255, 255, 255, 1);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-left: 5.5vw;
+    margin-right: 7vw;
+    z-index: 1;
+  }
+  
+  .assortment-cards {
+    display: flex;
+    justify-content: center;
+    gap: 8vw;
+    z-index: 1;
+  }
+  
+  .assortment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 1.56vw;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+  }
+  
+  .card-title-smoke {
+    position: relative;
+    left: -0.2vw;
+  }
+  
+  
+  .card-image {
+    width: 20vw;
+    height: 25vw;
+  }
+  
+  .card-image-smoke {
+    position: relative;
+    left: 0.5vw;
+  }
+  
+  .card-image-black {
+    position: relative;
+    top: 0.6vw;
+    left: 0.5vw;
+  }
+  
+  .card-image-nado {
+    position: relative;
+    top: -0.5vw;
+  }
+  
+  .details-btn {
+    padding: 1vw 2vw;
+    background: transparent;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Days", sans-serif;
+    font-weight: 400;
+    font-size: 2.08vw;
+    line-height: normal;
+    letter-spacing: 0%;
+    text-align: center;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease-in-out;
+    --borderW: 5%;
+    --borderH: 20%;
+    --borderSize: 0.1vw;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 1) var(--borderH),
+        transparent var(--borderH),
+        transparent calc(100% - var(--borderH)),
+        white calc(100% - var(--borderH))
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) var(--borderW),
+        transparent var(--borderW),
+        transparent calc(100% - var(--borderW)),
+        white calc(100% - var(--borderW))
+      ),
+      linear-gradient(
+        rgba(255, 255, 255, 1) var(--borderH),
+        transparent var(--borderH),
+        transparent calc(100% - var(--borderH)),
+        white calc(100% - var(--borderH))
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) var(--borderW),
+        transparent var(--borderW),
+        transparent calc(100% - var(--borderW)),
+        white calc(100% - var(--borderW))
+      );
+    background-size: var(--borderSize) 100%, 100% var(--borderSize),
+      var(--borderSize) 100%, 100% var(--borderSize);
+    background-position: 0 0, 0 0, 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .details-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .modal-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2.5vw);
+    box-shadow: 0 0 3.54vw 0 rgba(255, 255, 255, 0.05) inset,
+      0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
+    border-radius: 1.56vw;
+    padding: 1.5vw;
+    margin: 1vw 0 4vw 0;
+    width: 20vw;
+    height: 20vw;
+    color: rgba(255, 255, 255, 1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 0.5vw;
+    right: 1vw;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.25vw;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .modal-close:hover {
+    color: red;
+  }
+  
+  
+  .modal-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1.5;
+  }
