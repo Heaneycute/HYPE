@@ -9,11 +9,9 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-title">HYPE</h1>
 
-        <p className="hero-subtitle">Твой ритм никотина</p>
-
         <p className="hero-description">
           Никотиновые пластинки <br />
-          нового времени, созданные <br /> для тех, кто живет в движении.
+          нового времени, созданные <br /> для тех, кто живет в движении
         </p>
 
         <div className="hero-images">
@@ -32,7 +30,7 @@ const HeroSection = () => {
         <p className="hero-footer-text">
           Забудь про дым и неудобства — с HYPE <br />
           ты получаешь чистое удовольствие <br />
-          от никотина в любой ситуации.
+          от никотина в любой ситуации
         </p>
       </div>
     </section>

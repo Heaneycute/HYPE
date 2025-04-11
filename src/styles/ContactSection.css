@@ -79,37 +79,6 @@
     background: rgba(255, 255, 255, 0.5);
   }
   
-  .telegram-input::before {
-    content: "@";
-    position: absolute;
-    left: 2vw;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 1.2vw;
-    color: rgba(255, 255, 255, 1);
-    z-index: 1;
-  }
-  
-  .phone-input::before {
-    content: "+7";
-    position: absolute;
-    left: 2vw;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 1.2vw;
-    color: rgba(255, 255, 255, 1);
-    z-index: 1;
-  }
-  
-  .telegram-input .contact-input,
-  .phone-input .contact-input {
-    padding-left: 4vw;
-  }
-  
   .submit-btn {
     padding: 1vw 2vw;
     background: transparent;

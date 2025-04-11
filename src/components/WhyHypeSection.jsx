@@ -35,12 +35,10 @@ const WhyHypeSection = () => {
         <div className="hype-window">
           <h2 className="window-title">
             <span className="title-word title-word-1">Почему</span>
-            <br />
             <span className="title-word title-word-2">HYPE</span>
-            <br />
-            <span className="title-word title-word-3">выигрывает</span>
+            <span className="title-word title-word-3">выигрывает?</span>
           </h2>
-
+          
           <div className="reasons">
             <div className="reason">
               <h3 className="reason-title">Экономия на максимум:</h3>
@@ -66,7 +64,7 @@ const WhyHypeSection = () => {
             </div>
 
             <div className="reason">
-              <h3 className="reason-title">Вкусов разных:</h3>
+              <h3 className="reason-title">Вкусовой размах:</h3>
               <p className="reason-text">
                 от традиций нот до смелых экспериментов.
               </p>
@@ -83,7 +81,7 @@ const WhyHypeSection = () => {
           компактная структура идеально прилегает к десне, ускоряя всасывание, а
           премиальное сырье обеспечивает чистый <br /> и плавный результат. С
           HYPE ты всегда знаешь, чего ждать — никаких сюрпризов, только
-          удовольствие.
+          удовольствие
         </p>
       </div>
     </section>

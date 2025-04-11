@@ -14,7 +14,7 @@ const FeaturesSection = () => {
           <h3 className="feature-card-title">Свобода без компромиссов</h3>
           <p className="feature-card-text">
             Никакого дыма, табака <br />
-            или лишних вздыхов.
+            или лишних взглядов
           </p>
         </div>
 
@@ -22,7 +22,7 @@ const FeaturesSection = () => {
           <h3 className="feature-card-title">Вкусы на любой выбор</h3>
           <p className="feature-card-text">
             От лёгкой свежести <br />
-            до мощных аккордов.
+            до мощных аккордов
           </p>
         </div>
 
@@ -30,7 +30,7 @@ const FeaturesSection = () => {
           <h3 className="feature-card-title">Моментальный комфорт</h3>
           <p className="feature-card-text">
             Просто спрячь пластинку <br />
-            под губу и наслаждайся.
+            под губу и наслаждайся
           </p>
         </div>
       </div>
