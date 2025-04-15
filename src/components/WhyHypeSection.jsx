@@ -38,20 +38,18 @@ const WhyHypeSection = () => {
             <span className="title-word title-word-2">HYPE</span>
             <span className="title-word title-word-3">выигрывает?</span>
           </h2>
-          
+
           <div className="reasons">
             <div className="reason">
               <h3 className="reason-title">Экономия на максимум:</h3>
-              <p className="reason-text">
-                вдвое больше порций за половину цены <br /> классического снюса.
-              </p>
+              <p className="reason-text">больше порций, меньше затрат</p>
             </div>
 
             <div className="reason">
               <h3 className="reason-title">Премиум-уровень:</h3>
               <p className="reason-text">
                 белоснежные пластинки из отборного сырья <br />с идеально
-                сбалансированным никотином.
+                сбалансированным никотином
               </p>
             </div>
 
@@ -59,14 +57,14 @@ const WhyHypeSection = () => {
               <h3 className="reason-title">Чистота и свежесть:</h3>
               <p className="reason-text">
                 никаких повторных использований — бери новую <br /> и
-                наслаждайся.
+                наслаждайся
               </p>
             </div>
 
             <div className="reason">
               <h3 className="reason-title">Вкусовой размах:</h3>
               <p className="reason-text">
-                от традиций нот до смелых экспериментов.
+                от традиций нот до смелых экспериментов
               </p>
             </div>
           </div>

@@ -1,8 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/HYPE/',
-})
+  base: "/HYPE/",
+  define: {
+    // Делаем переменные окружения доступными в клиентском коде
+    "process.env": process.env,
+  },
+});

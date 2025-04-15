@@ -38,7 +38,7 @@
   position: relative;
   width: 40vw;
   height: 40vw;
-  left: -3vw;
+  left: 0;
 }
 
 .card {
@@ -48,20 +48,21 @@
 }
 
 .card-first {
+  width: 30vw;
   transform: rotate(-1deg);
   left: 0;
   z-index: 4;
 }
 
 .card-second {
-  bottom: 2vw;
-  left: 10.5vw;
+  bottom: 0vw;
+  left: 7vw;
   z-index: 3;
 }
 
 .card-third {
-  top: 1vw;
-  left: 18vw;
+  top: 2vw;
+  left: 16vw;
   z-index: 2;
 }
 

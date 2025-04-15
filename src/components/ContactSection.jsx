@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "../styles/ContactSection.css";
+import { toast } from "react-toastify";
 
 const ContactSection = () => {
   const [telegram, setTelegram] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [region, setRegion] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleTelegramChange = (e) => {
     const value = e.target.value;
@@ -33,8 +35,109 @@ const ContactSection = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const lastSubmitTime = localStorage.getItem("lastSubmitTime");
+    const currentTime = Date.now();
+    const oneMinuteInMs = 60 * 1000;
+
+    if (lastSubmitTime && currentTime - lastSubmitTime < oneMinuteInMs) {
+      const remainingTime = Math.ceil(
+        (oneMinuteInMs - (currentTime - lastSubmitTime)) / 1000
+      );
+      toast.warn(
+        `Пожалуйста, подождите ещё ${remainingTime} секунд перед следующей отправкой.`,
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
+        }
+      );
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const formData = {
+      telegram,
+      name,
+      phone,
+      region,
+    };
+
+    const message = `
+      Новая заявка:
+      Telegram: ${telegram}
+      Имя: ${name}
+      Телефон: ${phone}
+      Регион: ${region}
+    `;
+
+    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+    const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+    try {
+      const response = await fetch(telegramUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.ok) {
+        localStorage.setItem("lastSubmitTime", Date.now());
+
+        toast.success(
+          "Спасибо! Ваша заявка успешно отправлена, в ближайшее время с Вами свяжется наш менеджер.",
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "dark",
+          }
+        );
+        setTelegram("");
+        setName("");
+        setPhone("");
+        setRegion("");
+      } else {
+        toast.error("Ошибка при отправке заявки. Попробуйте снова.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
+        });
+      }
+    } catch (error) {
+      toast.error("Ошибка сервера. Попробуйте снова позже.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "dark",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -53,6 +156,7 @@ const ContactSection = () => {
               value={telegram}
               onChange={handleTelegramChange}
               placeholder="Telegram"
+              required
             />
           </div>
           <div className="input-wrapper">
@@ -62,6 +166,7 @@ const ContactSection = () => {
               value={name}
               onChange={handleNameChange}
               placeholder="Имя"
+              required
             />
           </div>
           <div className="input-wrapper phone-input">
@@ -71,6 +176,7 @@ const ContactSection = () => {
               value={phone}
               onChange={handlePhoneChange}
               placeholder="Телефон"
+              required
             />
           </div>
           <div className="input-wrapper">
@@ -80,12 +186,13 @@ const ContactSection = () => {
               value={region}
               onChange={handleRegionChange}
               placeholder="Регион"
+              required
             />
           </div>
         </div>
 
-        <button type="submit" className="submit-btn">
-          Отправить
+        <button type="submit" className="submit-btn" disabled={isSubmitting}>
+          {isSubmitting ? "Отправка..." : "Отправить"}
         </button>
       </form>
     </section>

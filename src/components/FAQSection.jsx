@@ -61,24 +61,6 @@ const FAQSection = () => {
         <div className="faq-item">
           <div className="faq-header">
             <h3 className="faq-subtitle">
-              Допустимо ли проглатывать пластинки HYPE?
-            </h3>
-            <button className="faq-toggle-btn" onClick={() => toggleSection(3)}>
-              {openSections[3] ? "−" : "+"}
-            </button>
-          </div>
-          {openSections[3] && (
-            <p className="faq-text">
-              Нет, они не предназначены для употребления внутрь. Если пластинка
-              была проглочена и вы почувствовали себя плохо, обратитесь за
-              медицинской помощью, взяв с собой упаковку продукта
-            </p>
-          )}
-        </div>
-
-        <div className="faq-item">
-          <div className="faq-header">
-            <h3 className="faq-subtitle">
               Каковы срок годности и правила хранения пластинок HYPE?
             </h3>
             <button className="faq-toggle-btn" onClick={() => toggleSection(4)}>
