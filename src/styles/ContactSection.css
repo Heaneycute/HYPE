@@ -57,14 +57,17 @@
   box-shadow: 0 0 3.54vw 0 rgba(255, 255, 255, 0.05) inset,
     0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
   border: none;
-  border-radius: 1.56vw;
-  padding-left: 10%;
+  border-radius: 0.7vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.2vw;
   color: rgba(255, 255, 255, 1);
   outline: none;
   box-sizing: border-box;
+}
+
+.contact-input::placeholder{
+  text-indent: 1vw;
 }
 
 .contact-input::placeholder {
@@ -75,8 +78,8 @@
   content: "";
   position: absolute;
   bottom: 0.5vw;
-  left: 10%;
-  right: 10%; 
+  left: 2%;
+  right: 2%; 
   height: 0.03vw;
   background: rgba(255, 255, 255, 0.5);
 }
