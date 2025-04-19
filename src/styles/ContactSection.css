@@ -57,7 +57,7 @@
     0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
   border: none;
   border-radius: 1.3vw;
-  padding-left: clamp(0.01px, 1.2vw, 2vw);
+  padding-left: clamp(2px, 1.2vw, 2vw);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: clamp(5px, 1.2vw, 1.2vw);
