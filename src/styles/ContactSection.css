@@ -64,17 +64,15 @@
   color: rgba(255, 255, 255, 1);
   outline: none;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 .contact-input::placeholder{
   text-indent: 1vw;
-}
-
-.contact-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.input-wrapper::after {
+/* .input-wrapper::after {
   content: "";
   position: absolute;
   bottom: 0.5vw;
@@ -82,7 +80,7 @@
   right: 2%; 
   height: 0.03vw;
   background: rgba(255, 255, 255, 0.5);
-}
+} */
 
 .submit-btn {
   padding: 1vw 2vw;
