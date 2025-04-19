@@ -150,43 +150,43 @@ const ContactSection = () => {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="contact-inputs">
           <div className="input-wrapper telegram-input">
-            <input
-              type="text"
+            <textarea
               className="contact-input"
               value={telegram}
               onChange={handleTelegramChange}
               placeholder="Telegram"
               required
+              rows="1"
             />
           </div>
           <div className="input-wrapper">
-            <input
-              type="text"
+            <textarea
               className="contact-input"
               value={name}
               onChange={handleNameChange}
               placeholder="Имя"
               required
+              rows="1"
             />
           </div>
           <div className="input-wrapper phone-input">
-            <input
-              type="text"
+            <textarea
               className="contact-input"
               value={phone}
               onChange={handlePhoneChange}
               placeholder="Телефон"
               required
+              rows="1"
             />
           </div>
           <div className="input-wrapper">
-            <input
-              type="text"
+            <textarea
               className="contact-input"
               value={region}
               onChange={handleRegionChange}
               placeholder="Регион"
               required
+              rows="1"
             />
           </div>
         </div>

@@ -59,6 +59,9 @@
   border: none;
   border-radius: 1.3vw;
   padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.8vw;
+  padding-bottom: 0.5vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.2vw;
@@ -67,6 +70,9 @@
   outline: none;
   appearance: none;
   -webkit-appearance: none;
+  resize: none;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .contact-input::placeholder {
