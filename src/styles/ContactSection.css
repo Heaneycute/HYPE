@@ -53,34 +53,32 @@
   width: 100%;
   height: 3.07vw;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(2.5vw);
   box-shadow: 0 0 3.54vw 0 rgba(255, 255, 255, 0.05) inset,
     0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
   border: none;
-  border-radius: 0.7vw;
+  border-radius: 1.3vw;
+  padding-left: clamp(5px, 1.2vw, 2vw);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.2vw;
+  font-size: clamp(7px, 1.2vw, 1.2vw);
   color: rgba(255, 255, 255, 1);
   outline: none;
   box-sizing: border-box;
-  -webkit-appearance: none;
 }
 
-.contact-input::placeholder{
-  text-indent: 1vw;
+.contact-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* .input-wrapper::after {
+.input-wrapper::after {
   content: "";
   position: absolute;
   bottom: 0.5vw;
-  left: 2%;
-  right: 2%; 
+  left: 5%;
+  right: 5%; 
   height: 0.03vw;
   background: rgba(255, 255, 255, 0.5);
-} */
+}
 
 .submit-btn {
   padding: 1vw 2vw;
