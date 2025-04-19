@@ -152,4 +152,16 @@
     right: -305%; 
     height: 0.03vw;
   }
+
+  .contact-input {
+    height: 20px;
+    font-size: 17px;
+    line-height: 28px;
+    padding-left: 5px;
+    border-radius: 10px;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+  }
+
 }
