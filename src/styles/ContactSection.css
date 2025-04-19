@@ -134,13 +134,22 @@
 }
 
 @media (max-width: 768px) {
+  .contact-inputs {
+    flex-direction: column;
+  }
+
+  .contact-section {
+    height: 40vw;
+  }
+
   .contact-input {
-    height: 13px;
-    line-height: 40px;
-    padding-left: 5px;
-    border-radius: 10px;
-    box-shadow: none;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
+    width: 90vw;
+  }
+
+  .input-wrapper::after {
+    bottom: 0.5vw;
+    left: 5%;
+    right: -305%; 
+    height: 0.03vw;
   }
 }
