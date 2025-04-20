@@ -46,7 +46,6 @@
 .input-wrapper {
   position: relative;
   width: 21.87vw;
-  max-width: 100%;
 }
 
 .contact-input {
@@ -67,6 +66,7 @@
   outline: none;
   appearance: none;
   -webkit-appearance: none;
+  text-align: left;
 }
 
 .contact-input::placeholder {
