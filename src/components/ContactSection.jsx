@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../styles/ContactSection.css";
 import { toast } from "react-toastify";
-import atIcon from "../assets/@.png";
-import plusSevenIcon from "../assets/+7.png";
+import { Input } from "@mui/material";
+import { IMaskInput } from "react-imask";
 
 const ContactSection = () => {
   const [telegram, setTelegram] = useState("");
@@ -23,11 +23,8 @@ const ContactSection = () => {
     }
   };
 
-  const handlePhoneChange = (e) => {
-    const value = e.target.value;
-    if (/^\d*$/.test(value)) {
-      setPhone(value);
-    }
+  const handlePhoneChange = (value) => {
+    setPhone(value);
   };
 
   const handleRegionChange = (e) => {
@@ -152,47 +149,49 @@ const ContactSection = () => {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="contact-inputs">
           <div className="input-wrapper telegram-input">
-            <img src={atIcon} alt="@ icon" className="input-icon transparent" />
-            <input
-              type="text"
+            <Input
               className="contact-input"
               value={telegram}
               onChange={handleTelegramChange}
               placeholder="@ Telegram"
               required
+              disableUnderline
             />
           </div>
           <div className="input-wrapper">
-            <img src={atIcon} alt="@ icon" className="input-icon transparent" />
-            <input
-              type="text"
+            <Input
               className="contact-input"
               value={name}
               onChange={handleNameChange}
               placeholder="Имя"
               required
+              disableUnderline
             />
           </div>
           <div className="input-wrapper phone-input">
-            <img src={plusSevenIcon} alt="+7 icon" className="input-icon transparent" />
-            <input
-              type="text"
+            <Input
               className="contact-input"
               value={phone}
-              onChange={handlePhoneChange}
+              onChange={(e) => handlePhoneChange(e.target.value)}
               placeholder="+7 Телефон"
               required
+              disableUnderline
+              slotProps={{
+                input: {
+                  component: IMaskInput,
+                  mask: "+7(000)000-00-00",
+                },
+              }}
             />
           </div>
           <div className="input-wrapper">
-            <img src={plusSevenIcon} alt="+7 icon" className="input-icon transparent" />
-            <input
-              type="text"
+            <Input
               className="contact-input"
               value={region}
               onChange={handleRegionChange}
               placeholder="Регион"
               required
+              disableUnderline
             />
           </div>
         </div>
