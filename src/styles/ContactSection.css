@@ -46,6 +46,7 @@
 .input-wrapper {
   position: relative;
   width: 21.87vw;
+  max-width: 100%;
 }
 
 .contact-input {
@@ -66,11 +67,59 @@
   outline: none;
   appearance: none;
   -webkit-appearance: none;
-  text-align: left;
 }
 
 .contact-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+.telegram-input .contact-input::placeholder,
+.phone-input .contact-input::placeholder {
+  position: relative;
+}
+
+.telegram-input .contact-input:placeholder-shown::before,
+.phone-input .contact-input:placeholder-shown::before {
+  content: attr(placeholder);
+  position: absolute;
+  left: 2.5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.telegram-input .contact-input:placeholder-shown::before {
+  content: "@";
+  color: rgba(255, 255, 255, 1);
+}
+
+.phone-input .contact-input:placeholder-shown::before {
+  content: "+7";
+  color: rgba(255, 255, 255, 1);
+}
+
+.telegram-input .contact-input:placeholder-shown::after,
+.phone-input .contact-input:placeholder-shown::after {
+  content: attr(placeholder);
+  position: absolute;
+  left: 3.5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.telegram-input .contact-input:placeholder-shown::after {
+  content: " Telegram";
+}
+
+.phone-input .contact-input:placeholder-shown::after {
+  content: " Телефон";
 }
 
 .input-wrapper::after {
@@ -81,6 +130,19 @@
   right: 5%;
   height: 0.03vw;
   background: rgba(255, 255, 255, 0.5);
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.7vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1vw;
+  height: 1vw;
+}
+
+.input-icon.transparent {
+  opacity: 0;
 }
 
 .submit-btn {

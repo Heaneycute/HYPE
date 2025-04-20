@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../styles/ContactSection.css";
 import { toast } from "react-toastify";
+import atIcon from "../assets/@.png";
+import plusSevenIcon from "../assets/+7.png";
 
 const ContactSection = () => {
   const [telegram, setTelegram] = useState("");
@@ -150,16 +152,18 @@ const ContactSection = () => {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="contact-inputs">
           <div className="input-wrapper telegram-input">
+            <img src={atIcon} alt="@ icon" className="input-icon transparent" />
             <input
               type="text"
               className="contact-input"
               value={telegram}
               onChange={handleTelegramChange}
-              placeholder="Telegram"
+              placeholder="@ Telegram"
               required
             />
           </div>
           <div className="input-wrapper">
+            <img src={atIcon} alt="@ icon" className="input-icon transparent" />
             <input
               type="text"
               className="contact-input"
@@ -170,16 +174,18 @@ const ContactSection = () => {
             />
           </div>
           <div className="input-wrapper phone-input">
+            <img src={plusSevenIcon} alt="+7 icon" className="input-icon transparent" />
             <input
               type="text"
               className="contact-input"
               value={phone}
               onChange={handlePhoneChange}
-              placeholder="Телефон"
+              placeholder="+7 Телефон"
               required
             />
           </div>
           <div className="input-wrapper">
+            <img src={plusSevenIcon} alt="+7 icon" className="input-icon transparent" />
             <input
               type="text"
               className="contact-input"
