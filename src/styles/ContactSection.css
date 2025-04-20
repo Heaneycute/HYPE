@@ -58,7 +58,8 @@
     0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
   border: none;
   border-radius: 1.3vw;
-  padding-left: 1vw;
+  padding-left: 2.5vw; /* Отступ для иконки */
+  padding-right: 1vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.2vw;
@@ -67,59 +68,32 @@
   outline: none;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1.5vw; /* Смещаем текст и каретку вправо */
 }
 
+/* Общий стиль для плейсхолдера */
 .contact-input::placeholder {
-  color: rgba(255, 255, 255, 0.5); 
+  color: rgba(255, 255, 255, 0.5); /* Менее яркий цвет для текста */
 }
 
+/* Стили для Telegram и Телефон: делаем символы @ и +7 ярче */
 .telegram-input .contact-input::placeholder,
 .phone-input .contact-input::placeholder {
-  position: relative;
+  color: rgba(255, 255, 255, 1); /* Яркий белый для @ и +7 */
 }
 
-.telegram-input .contact-input:placeholder-shown::before,
-.phone-input .contact-input:placeholder-shown::before {
-  content: attr(placeholder);
-  position: absolute;
-  left: 2.5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 1.2vw;
-  color: rgba(255, 255, 255, 0.5);
-}
+/* На мобильных устройствах усиливаем отступы */
+@media (max-width: 768px) {
+  .contact-input {
+    padding-left: 3vw; /* Увеличиваем отступ на мобильных */
+    text-indent: 2vw; /* Увеличиваем смещение текста и каретки */
+    -webkit-text-indent: 2vw; /* Для Safari */
+  }
 
-.telegram-input .contact-input:placeholder-shown::before {
-  content: "@";
-  color: rgba(255, 255, 255, 1);
-}
-
-.phone-input .contact-input:placeholder-shown::before {
-  content: "+7";
-  color: rgba(255, 255, 255, 1);
-}
-
-.telegram-input .contact-input:placeholder-shown::after,
-.phone-input .contact-input:placeholder-shown::after {
-  content: attr(placeholder);
-  position: absolute;
-  left: 3.5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 1.2vw;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.telegram-input .contact-input:placeholder-shown::after {
-  content: " Telegram";
-}
-
-.phone-input .contact-input:placeholder-shown::after {
-  content: " Телефон";
+  .input-icon {
+    left: 1vw; /* Корректируем позицию иконки на мобильных */
+  }
 }
 
 .input-wrapper::after {
@@ -142,7 +116,7 @@
 }
 
 .input-icon.transparent {
-  opacity: 0;
+  opacity: 0; /* Полная прозрачность */
 }
 
 .submit-btn {
