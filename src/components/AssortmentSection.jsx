@@ -95,7 +95,7 @@ const AssortmentSection = () => {
                 ×
               </button>
               <p className="modal-title">HYPE Дым</p>
-              <p className="modal-text">
+              <p className="assort-modal-text">
                 Это тот самый HYPE, который стал легендой. Сбалансированная крепость 50 
                 <br />мг, удобная упаковка с запасом в 55+ порций и целых 11 сочных вкусов.
               </p>
@@ -148,7 +148,7 @@ const AssortmentSection = () => {
                 ×
               </button>
               <p className="modal-title">HYPE Black</p>
-              <p className="modal-text">
+              <p className="assort-modal-text">
                 Линейка HYPE Black — это усиленная версия всего, что ты ценишь. Стильный 
                 <br />минималистичный дизайн, знакомые вкусы и мощные 70 мг крепости.
               </p>
@@ -182,7 +182,7 @@ const AssortmentSection = () => {
                 ×
               </button>
               <p className="modal-title">HYPE x ЧёNADO</p>
-              <p className="modal-text">
+              <p className="assort-modal-text">
                 HYPE x ЧёNADO — Стильная упаковка, 5 дерзких вкусовых ударов и 70 мг 
                 <br />для тех, кто в теме. Новинка, которую все так долго ждали!
               </p>

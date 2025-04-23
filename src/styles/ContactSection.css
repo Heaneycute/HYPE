@@ -50,7 +50,7 @@
 
 .contact-input {
   width: 100%;
-  height: 4vw;
+  height: 3vw;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 3.54vw 0 rgba(255, 255, 255, 0.05) inset,
     0 0.2vw 0.2vw 0 rgba(255, 255, 255, 0.15) inset;
@@ -60,7 +60,7 @@
   padding-right: 1vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 1.2vw;
   line-height: normal;
   color: rgba(255, 255, 255, 1);
   outline: none;
@@ -69,14 +69,14 @@
 .contact-input .MuiInputBase-input {
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: 3vw;
   background: transparent;
   border: none;
   border-radius: 1.3vw;
   padding: 0 0 0 5px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 1.2vw;
   line-height: normal;
   color: rgba(255, 255, 255, 1);
   outline: none;
